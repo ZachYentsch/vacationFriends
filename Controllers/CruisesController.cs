@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using vacationFriends.Models;
 using vacationFriends.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace vacationFriends.Controllers
 {

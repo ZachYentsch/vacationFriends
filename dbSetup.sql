@@ -15,9 +15,11 @@ CREATE TABLE IF NOT EXISTS cruises(
   stops INT,
   stopName VARCHAR(255),
   type VARCHAR(255) NOT NULL,
-  price INT NOT NULL
+  creatorId VARCHAR(255) NOT NULL,
+  price INT NOT NULL,
+  FOREIGN KEY(creatorId) REFERENCES accounts(id) ON DELETE CASCADE
 ) default charset utf8 COMMENT '';
-DROP Table cruises;
+DROP Table trips;
 CREATE TABLE IF NOT EXISTS trips(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -26,5 +28,7 @@ CREATE TABLE IF NOT EXISTS trips(
   timeFrame VARCHAR(255) NOT NULL,
   room VARCHAR(255) NOT NULL,
   type VARCHAR(255) NOT NULL,
-  price INT NOT NULL
+  creatorId VARCHAR(255) NOT NULL,
+  price INT NOT NULL,
+  FOREIGN KEY(creatorId) REFERENCES accounts(id) ON DELETE CASCADE
 ) default charset utf8 COMMENT '';

@@ -6,3 +6,25 @@ CREATE TABLE IF NOT EXISTS accounts(
   email varchar(255) COMMENT 'User Email',
   picture varchar(255) COMMENT 'User Picture'
 ) default charset utf8 COMMENT '';
+CREATE TABLE IF NOT EXISTS cruises(
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  destination VARCHAR(255) NOT NULL,
+  timeFrame VARCHAR(255) NOT NULL,
+  stops INT,
+  stopName VARCHAR(255),
+  type VARCHAR(255) NOT NULL,
+  price INT NOT NULL
+) default charset utf8 COMMENT '';
+DROP Table cruises;
+CREATE TABLE IF NOT EXISTS trips(
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  destination VARCHAR(255) NOT NULL,
+  timeFrame VARCHAR(255) NOT NULL,
+  room VARCHAR(255) NOT NULL,
+  type VARCHAR(255) NOT NULL,
+  price INT NOT NULL
+) default charset utf8 COMMENT '';

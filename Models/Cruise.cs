@@ -10,6 +10,7 @@ namespace vacationFriends.Models
         public DateTime UpdatedAt { get; set; }
         public string Destination { get; set; }
         public string TimeFrame { get; set; }
+        public string CreatorId { get; set; }
         public int Stops { get; set; }
         public string StopName { get; set; }
         public float Price { get; set; }

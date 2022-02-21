@@ -13,5 +13,7 @@ namespace vacationFriends.Models
         public string Room { get; set; }
         public float Price { get; set; }
         public string Type { get; set; }
+        public string CreatorId { get; set; }
+
     }
 }
